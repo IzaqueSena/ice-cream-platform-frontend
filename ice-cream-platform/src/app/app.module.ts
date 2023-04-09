@@ -11,6 +11,8 @@ import { ClientsListingComponent } from './components/clients/clients-listing/cl
 import { ClientsSearchService } from './services/clients-search.service';
 import { OrdersListingComponent } from './components/orders/orders-listing/orders-listing.component';
 import { OrdersSearchService } from './services/orders-search.service';
+import { ProductsComponent } from './components/products/products.component';
+import { EmployeeComponent } from './components/employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { OrdersSearchService } from './services/orders-search.service';
     ClientsComponent,
     OrdersComponent,
     ClientsListingComponent,
-    OrdersListingComponent
+    OrdersListingComponent,
+    ProductsComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
