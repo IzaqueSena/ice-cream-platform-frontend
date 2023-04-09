@@ -1,3 +1,4 @@
+import { StoreElementsComponent } from './components/store/store-elements/store-elements.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientsListingComponent } from './components/clients/clients-listing/clients-listing.component';
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'products-search', component: ProductsComponent},
   {path: 'employees-search', component: EmployeeComponent},
   {path: 'stores-search', component: StoreComponent},
-  {path: 'suppliers-search', component: SupplierComponent}
+  {path: 'suppliers-search', component: SupplierComponent},
+  {path: 'stores-search/stores-elements', component: StoreElementsComponent}
 ];
 
 @NgModule({

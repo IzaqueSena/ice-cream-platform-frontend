@@ -1,3 +1,4 @@
+import { StoreSearchService } from './services/store-search.service';
 import { EmployeePerformanceService } from './services/employee-performance.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,6 +19,7 @@ import { StoreComponent } from './components/store/store.component';
 import { SupplierComponent } from './components/supplier/supplier.component';
 import { SuppliersSearchService } from './services/suppliers-search.service';
 import { BestSellingProductService } from './services/best-selling-product.service';
+import { StoreElementsComponent } from './components/store/store-elements/store-elements.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { BestSellingProductService } from './services/best-selling-product.servi
     ProductsComponent,
     EmployeeComponent,
     StoreComponent,
-    SupplierComponent
+    SupplierComponent,
+    StoreElementsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { BestSellingProductService } from './services/best-selling-product.servi
     OrdersSearchService,
     SuppliersSearchService,
     BestSellingProductService,
-    EmployeePerformanceService
+    EmployeePerformanceService,
+    StoreSearchService
   ],
   bootstrap: [AppComponent]
 })
