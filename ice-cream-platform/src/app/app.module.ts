@@ -9,6 +9,8 @@ import { OrdersComponent } from './components/orders/orders.component';
 import { FormsModule } from '@angular/forms';
 import { ClientsListingComponent } from './components/clients/clients-listing/clients-listing.component';
 import { ClientsSearchService } from './services/clients-search.service';
+import { OrdersListingComponent } from './components/orders/orders-listing/orders-listing.component';
+import { OrdersSearchService } from './services/orders-search.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { ClientsSearchService } from './services/clients-search.service';
     HomepageComponent,
     ClientsComponent,
     OrdersComponent,
-    ClientsListingComponent
+    ClientsListingComponent,
+    OrdersListingComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { ClientsSearchService } from './services/clients-search.service';
     FormsModule
   ],
   providers: [
-    ClientsSearchService
+    ClientsSearchService,
+    OrdersSearchService
   ],
   bootstrap: [AppComponent]
 })

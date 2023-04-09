@@ -35,7 +35,7 @@
                   
                   <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-text-grey-10 u-icon-1"><img src="./../assets/images/869687-cbbf1257.png" alt=""></span>
                     <h5 class="u-align-center u-text u-text-2">Loja</h5>
-                    <form ngForm #ftext="ngForm" (ngSubmit)="submitStore(ftext.value)" class="container-xl container">
+                    <form ngForm #fstore="ngForm" (ngSubmit)="submitStore(fstore.value)" class="container-xl container">
                       <div class="form-group col-md-6">
                         <input ngModel name="text" type="text" #date="ngModel" class="form-control" placeholder="Loja">
                       </div>
@@ -46,7 +46,7 @@
                 <div class="u-black u-container-style u-list-item u-opacity u-opacity-50 u-repeater-item u-video-cover">
                   <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-text-grey-10 u-icon-2"><img src="./../assets/images/2182890-a69fa140.png" alt=""></span>
                     <h5 class="u-align-center u-text u-text-3">Cliente</h5>
-                    <form ngForm #ftext="ngForm" (ngSubmit)="submitClient(ftext.value)" class="container-xl container">
+                    <form ngForm #fclient="ngForm" (ngSubmit)="submitClient(fclient.value)" class="container-xl container">
                       <div class="form-group col-md-7">
                         <input ngModel name="text" #value="ngModel" type="text" class="form-control text-input" placeholder="Nome">
                       </div>
@@ -61,18 +61,5 @@
       </div>
     </section>
     
-    
-    
-    <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
-        <span>Website Templates</span>
-      </a>
-      <p class="u-text">
-        <span>created with</span>
-      </p>
-      <a class="u-link" href="" target="_blank">
-        <span>Website Builder Software</span>
-      </a>. 
-    </section>
   
 </body></html>

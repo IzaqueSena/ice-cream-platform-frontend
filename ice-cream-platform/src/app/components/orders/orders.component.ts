@@ -16,14 +16,14 @@ export class OrdersComponent {
     console.log(forms)
     let store = forms.text
     console.log(store)
-    // this.router.navigate(['clients-search/clients-listing'],{queryParams: {searchType: 'store', searchValue: store}}).then(() => {window.location.reload();});
+    this.router.navigate(['orders-search/orders-listing'],{queryParams: {searchType: 'store', searchValue: store}}).then(() => {window.location.reload();});
   }
 
   submitClient(forms: any) {
     console.log(forms)
     let client = forms.text
     console.log(client)
-    // this.router.navigate(['clients-search/clients-listing'],{queryParams: {searchType: 'value', searchValue: value}}).then(() => {window.location.reload();});
+    this.router.navigate(['orders-search/orders-listing'],{queryParams: {searchType: 'client', searchValue: client}}).then(() => {window.location.reload();});
   }
 
   log(x: any) {
