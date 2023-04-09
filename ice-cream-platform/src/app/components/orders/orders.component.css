@@ -122,6 +122,11 @@
     border-top: 1px;
   }
 
+  .titulo{
+    margin-top: 30px !important;
+  }
+
+
   .botao{
     color: black;
     opacity: 0.2;
