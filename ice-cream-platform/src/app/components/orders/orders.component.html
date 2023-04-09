@@ -35,11 +35,23 @@
                   
                   <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-text-grey-10 u-icon-1"><img src="./../assets/images/869687-cbbf1257.png" alt=""></span>
                     <h5 class="u-align-center u-text u-text-2">Loja</h5>
+                    <form ngForm #ftext="ngForm" (ngSubmit)="submitStore(ftext.value)" class="container-xl container">
+                      <div class="form-group col-md-6">
+                        <input ngModel name="text" type="text" #date="ngModel" class="form-control" placeholder="Loja">
+                      </div>
+                      <button class="botao" href="">Buscar</button>
+                    </form>
                   </div>
                 </div>
                 <div class="u-black u-container-style u-list-item u-opacity u-opacity-50 u-repeater-item u-video-cover">
                   <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-text-grey-10 u-icon-2"><img src="./../assets/images/2182890-a69fa140.png" alt=""></span>
                     <h5 class="u-align-center u-text u-text-3">Cliente</h5>
+                    <form ngForm #ftext="ngForm" (ngSubmit)="submitClient(ftext.value)" class="container-xl container">
+                      <div class="form-group col-md-7">
+                        <input ngModel name="text" #value="ngModel" type="text" class="form-control text-input" placeholder="Nome">
+                      </div>
+                      <button class="botao" href="">Buscar</button>
+                    </form>
                   </div>
                 </div>
               </div>
