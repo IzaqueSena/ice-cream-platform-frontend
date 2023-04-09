@@ -31,11 +31,22 @@
         <div class="u-container-style u-grey-80 u-group u-opacity u-opacity-20 u-radius-21 u-shape-round u-group-1">
           <div class="u-container-layout u-container-layout-1">
             <h2 class="u-align-center u-custom-font u-font-lato u-text u-text-grey-80 u-text-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Clientes:</h2>
-            <ul>
-              <li *ngFor="let cliente of clientes;">
-                  {{ "nome:" + cliente.nome + "email:" + cliente.email + "endereço:" + cliente.endereco }}
-              </li>
-           </ul>
+            <table class="tabela">
+              <thead>
+              <tr>
+                  <th class="coluna">Nome</th>
+                  <th class="coluna">Email</th>
+                  <th class="coluna">Data de Encomenda</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let cliente of clientes;">
+                  <td class="coluna">{{cliente.nome}}</td>
+                  <td class="coluna">{{cliente.email}}</td>
+                  <td class="coluna">{{cliente.endereco}}</td>
+              </tr>
+              </tbody>
+           </table>
           </div>
         </div>
       </div>

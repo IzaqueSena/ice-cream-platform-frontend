@@ -82,7 +82,7 @@
   }
   
   .u-section-1 .u-text-3 {
-    margin: 52px 0 0;
+    margin: -36px 0 0 -9px;
   }
   
   .u-section-1 .u-container-layout-4 {
@@ -229,10 +229,6 @@
     margin: 0 auto;
   }
   
-  .u-section-2 .u-text-2 {
-    margin: 36px 0 0;
-  }
-  
   .u-section-2 .u-container-layout-3 {
     padding: 21px 20px;
   }
@@ -247,7 +243,6 @@
     font-family: Roboto, sans-serif;
     font-size: 1.25rem;
     text-transform: none;
-    margin: 52px 0 0;
   }
   
   @media (max-width: 1199px) {
@@ -297,18 +292,23 @@
 
 
   .form-control {
-    color: black;
+    color: #000;
     opacity: 0.2;
   }
 
   .form-control-2 {
-    color: black;
+    color: #000;
     opacity: 0.2;
     width: 130px;
   }
 
   .u-text{
     border-top: 1px;
+  }
+
+  .botao{
+    color: black;
+    opacity: 0.2;
   }
   
   @media (max-width: 575px) {
