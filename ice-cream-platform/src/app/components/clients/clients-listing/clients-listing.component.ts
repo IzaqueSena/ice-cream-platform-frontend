@@ -4,7 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-clients-listing',
   templateUrl: './clients-listing.component.html',
-  styleUrls: ['./clients-listing.component.css', '../../../assets/styles/nicepage.css']
+  styleUrls: ['./clients-listing.component.css', '../../../../assets/styles/nicepage.css']
 })
 export class ClientsListingComponent {
   clientes: any;
@@ -16,12 +16,7 @@ export class ClientsListingComponent {
   ngOnInit(): void {
     this.route.queryParams.subscribe( (params: any) => {
       console.log(params)
-      if (params.searchType == 'date') {
-          
-      }
-      if (params.searchType == 'value') {
-        
-      }
+      this.clientes = this.clientes1;
     });
   }
  

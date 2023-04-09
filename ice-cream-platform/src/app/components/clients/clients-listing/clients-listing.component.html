@@ -5,10 +5,10 @@
     <meta name="keywords" content="Buscar dados da loja...">
     <meta name="description" content="">
     <title>clients-listing</title>
-    <link rel="stylesheet" href="../../../assets/styles/nicepage.css" media="screen">
+    <link rel="stylesheet" href="../../../../assets/styles/nicepage.css" media="screen">
 <link rel="stylesheet" href="clients-listing.component.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="../../../assets/scripts/nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="../../../../assets/scripts/nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 5.8.0, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i">
@@ -33,7 +33,7 @@
             <h2 class="u-align-center u-custom-font u-font-lato u-text u-text-grey-80 u-text-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Clientes:</h2>
             <ul>
               <li *ngFor="let cliente of clientes;">
-                  {{ cliente.nome }}
+                  {{ "nome:" + cliente.nome + "email:" + cliente.email + "endereço:" + cliente.endereco }}
               </li>
            </ul>
           </div>

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-clients',
   templateUrl: './clients.component.html',
-  styleUrls: ['./clients.component.css', '../../assets/styles/nicepage.css']
+  styleUrls: ['./clients.component.css', '../../../assets/styles/nicepage.css']
 })
 export class ClientsComponent {
 
