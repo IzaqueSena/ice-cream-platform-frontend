@@ -3025,7 +3025,7 @@ a {
 }
 .u-form-progress-icon.u-icon img {
   height: 100% !important;
-  width: auto !important;
+  width: 100% !important;
 }
 .u-form-progress-icon.u-icon:empty:before {
   counter-increment: step;

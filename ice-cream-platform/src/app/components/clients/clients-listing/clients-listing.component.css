@@ -101,6 +101,11 @@
     text-transform: none;
     margin: 52px 0 0;
   }
+
+  .fundo{
+    min-width: 100% !important;
+    min-height: 100 !important;
+  }
   
   @media (max-width: 1199px) {
     .u-section-1 .u-sheet-1 {
