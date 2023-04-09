@@ -31,6 +31,20 @@
         <div class="u-container-style u-grey-80 u-group u-opacity u-opacity-20 u-radius-21 u-shape-round u-group-1">
           <div class="u-container-layout u-container-layout-1">
             <h2 class="u-align-center u-custom-font u-font-lato u-text u-text-grey-80 u-text-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Fornecedores:</h2>
+            <table class="tabela">
+              <thead>
+              <tr>
+                <th class="coluna">Nome</th>
+                <th class="coluna">Endereço</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let supplier of suppliers;">
+                <td class="coluna">{{supplier.name}}</td>
+                <td class="coluna">{{supplier.address}}</td>
+              </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
