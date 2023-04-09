@@ -14,6 +14,7 @@ import { OrdersSearchService } from './services/orders-search.service';
 import { ProductsComponent } from './components/products/products.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { StoreComponent } from './components/store/store.component';
+import { SupplierComponent } from './components/supplier/supplier.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StoreComponent } from './components/store/store.component';
     OrdersListingComponent,
     ProductsComponent,
     EmployeeComponent,
-    StoreComponent
+    StoreComponent,
+    SupplierComponent
   ],
   imports: [
     BrowserModule,

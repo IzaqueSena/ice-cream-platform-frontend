@@ -130,6 +130,7 @@
   .botao{
     color: black;
     opacity: 0.2;
+    width:70px;
   }
   
   @media (max-width: 575px) {
