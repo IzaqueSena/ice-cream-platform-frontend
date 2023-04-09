@@ -1,3 +1,4 @@
+import { EmployeePerformanceService } from './services/employee-performance.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -40,7 +41,8 @@ import { BestSellingProductService } from './services/best-selling-product.servi
     ClientsSearchService,
     OrdersSearchService,
     SuppliersSearchService,
-    BestSellingProductService
+    BestSellingProductService,
+    EmployeePerformanceService
   ],
   bootstrap: [AppComponent]
 })
