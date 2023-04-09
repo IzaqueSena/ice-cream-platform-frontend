@@ -1,3 +1,4 @@
+import { ClientsSearchService } from './../../../services/clients-search.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -7,26 +8,25 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./clients-listing.component.css', '../../../../assets/styles/nicepage.css']
 })
 export class ClientsListingComponent {
-  clientes: any;
+  clients: any
+  service: ClientsSearchService
+  type: any
 
-  constructor(private route: ActivatedRoute, private router: Router) {
-
+  constructor(private route: ActivatedRoute, private router: Router, private searchService: ClientsSearchService) {
+    this.service = searchService;
   }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe( (params: any) => {
       console.log(params)
-      this.clientes = this.clientes1;
+      this.type = params.searchType
+      if (params.searchType == 'date') {
+        this.clients = this.searchService.readClientsByDate(params.searchValue)
+      }
+      if (params.searchType == 'value') {
+        this.clients = this.searchService.readClientsByValue(params.searchValue)
+      }
     });
   }
  
-  clientes1 = [
-    {nome: 'izaque', email: 'iza@usp.br', endereco: 'rua'},
-    {nome: 'a', email: 'iza@usp.br', endereco: 'rua'}
-  ];
-  
-  clientes2 = [
-    {nome: 'ib', email: 'iza@usp.br', endereco: 'rua'},
-    {nome: 'c', email: 'iza@usp.br', endereco: 'rua'}
-  ];
 }

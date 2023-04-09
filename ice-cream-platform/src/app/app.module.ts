@@ -8,6 +8,7 @@ import { ClientsComponent } from './components/clients/clients.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { FormsModule } from '@angular/forms';
 import { ClientsListingComponent } from './components/clients/clients-listing/clients-listing.component';
+import { ClientsSearchService } from './services/clients-search.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { ClientsListingComponent } from './components/clients/clients-listing/cl
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    ClientsSearchService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
