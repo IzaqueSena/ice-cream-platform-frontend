@@ -16,6 +16,7 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { StoreComponent } from './components/store/store.component';
 import { SupplierComponent } from './components/supplier/supplier.component';
 import { SuppliersSearchService } from './services/suppliers-search.service';
+import { BestSellingProductService } from './services/best-selling-product.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { SuppliersSearchService } from './services/suppliers-search.service';
   providers: [
     ClientsSearchService,
     OrdersSearchService,
-    SuppliersSearchService
+    SuppliersSearchService,
+    BestSellingProductService
   ],
   bootstrap: [AppComponent]
 })
