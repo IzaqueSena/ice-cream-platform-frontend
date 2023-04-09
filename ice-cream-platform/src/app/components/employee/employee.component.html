@@ -32,11 +32,11 @@
             <div class="u-list u-list-1">
               <div display="inline" class="u-repeater u-repeater-1">
                 <div class="u-black u-container-style u-list-item u-opacity u-opacity-50 u-repeater-item u-list-item-1">
-                  <div class="alinhar u-container-layout u-similar-container u-container-layout-2">
-                    <form ngForm #femployee="ngForm" (ngSubmit)="submitEmployer(femployee.value)" class="container-xl container">
+                  <div class=" u-container-layout u-similar-container u-container-layout-2">
+                    <form ngForm #femployee="ngForm" (ngSubmit)="submitEmployer(femployee.value)" class="container-xl container forms alinhar">
                       <span class="u-file-icon u-icon  u-icon-1"><img src="../../../assets/images/912316-bbdd12e6.png" alt=""></span>
                       <span><input ngModel name="employeeName" type="text" #employeeName="ngModel" class="formulario form-control" placeholder="Funcionário"></span>
-                      <span><button class="formulario botao" href="">Buscar</button></span>
+                      <span><button class="formulario botao" href="" style="cursor: pointer">Buscar</button></span>
                     </form>
                   </div>
                 </div>
@@ -46,10 +46,17 @@
               <div class="u-repeater u-repeater-2">
                 <div class="u-black u-container-style u-list-item u-opacity u-opacity-50 u-repeater-item u-list-item-2">
                   <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-text-grey-10 u-icon-2"><img src="../../../assets/images/3642114-e8a01db0.png" alt=""></span>
-                    <h5 class="u-align-center u-text u-text-3">Número de Vendas: <br>
-                    <div *ngIf="show">
-                      {{ employeePerformance.number_of_sales }}
-                    </div>  
+                    <h5 class="u-align-center u-text u-text-3">                      
+                      <ng-template [ngIf]="show" [ngIfElse]="notshow">
+                      <div>
+                        Número de Vendas: {{ employeePerformance.number_of_sales }}
+                      </div>
+                    </ng-template>
+                    <ng-template #notshow>
+                      <div>
+                        Número de Vendas:<br>
+                      </div> 
+                    </ng-template>
                     </h5>
                   </div>
                 </div>
@@ -59,10 +66,17 @@
               <div class="u-repeater u-repeater-3">
                 <div class="u-black u-container-style u-list-item u-opacity u-opacity-50 u-repeater-item u-list-item-3">
                   <div class="u-container-layout u-similar-container u-container-layout-4"><span class="u-file-icon u-icon u-text-grey-10 u-icon-3"><img src="../../../assets/images/1077976-45f35e60.png" alt=""></span>
-                    <h5 class="u-align-center u-text u-text-4">Valor Acumulado:<br>
-                    <div *ngIf="show">
-                      {{ employeePerformance.accumulated_value }}
-                    </div>  
+                    <h5 class="u-align-center u-text u-text-4">                    
+                      <ng-template [ngIf]="show" [ngIfElse]="notshow">
+                      <div>
+                        Valor Acumlado: {{ employeePerformance.accumulated_value }}
+                      </div>
+                    </ng-template>
+                    <ng-template #notshow>
+                      <div>
+                        Valor Acumlado:<br>
+                      </div>
+                    </ng-template>
                     </h5>
                   </div>
                 </div>
