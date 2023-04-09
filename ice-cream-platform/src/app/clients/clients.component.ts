@@ -6,7 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./clients.component.css', '../../assets/styles/nicepage.css']
 })
 export class ClientsComponent {
-  submit() {
-    console.log('a')
+  submitDate(forms: any) {
+    console.log(forms)
+    let date = forms.date
+    console.log(date)
   }
+
+  submitValue(forms: any) {
+    console.log(forms)
+    let value = forms.value
+    console.log(value)
+  }
+
+  log(x: any) {
+    console.log(x)
+  } 
 }
