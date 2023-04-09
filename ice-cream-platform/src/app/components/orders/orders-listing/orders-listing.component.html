@@ -30,19 +30,19 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-container-style u-grey-80 u-group u-opacity u-opacity-20 u-radius-21 u-shape-round u-group-1">
           <div class="u-container-layout u-container-layout-1">
-            <h2 class="u-align-center u-custom-font u-font-lato u-text u-text-grey-80 u-text-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Clientes:</h2>
+            <h2 class="u-align-center u-custom-font u-font-lato u-text u-text-grey-80 u-text-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Encomendas:</h2>
             <table *ngIf="type=='store'" class="tabela">
                 <thead>
                 <tr>
-                  <th class="coluna">Nome</th>
-                  <th class="coluna">Email</th>
-                  <th class="coluna">Data de Encomenda</th>
+                  <th class="coluna">Cliente</th>
+                  <th class="coluna">Valor do Pedido</th>
+                  <th class="coluna">Data do Pedido</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr *ngFor="let order of orders;">
                   <td class="coluna">{{order.name}}</td>
-                  <td class="coluna">{{order.email}}</td>
+                  <td class="coluna">{{order.totalValue}}</td>
                   <td class="coluna">{{order.orderDate}}</td>
                 </tr>
                 </tbody>
@@ -50,16 +50,16 @@
               <table *ngIf="type=='client'" class="tabela">
                 <thead>
                 <tr>
-                  <th class="coluna">Nome</th>
-                  <th class="coluna">Email</th>
-                  <th class="coluna">Valor em Compras</th>
+                  <th class="coluna">Loja</th>
+                  <th class="coluna">Valor do Pedido</th>
+                  <th class="coluna">Data do Pedido</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr *ngFor="let order of orders;">
                     <td class="coluna">{{order.name}}</td>
-                    <td class="coluna">{{order.email}}</td>
                     <td class="coluna">{{order.totalValue}}</td>
+                    <td class="coluna">{{order.orderDate}}</td>
                 </tr>
                 </tbody>
               </table>

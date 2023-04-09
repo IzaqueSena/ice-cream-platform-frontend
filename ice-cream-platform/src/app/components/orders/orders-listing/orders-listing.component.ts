@@ -20,10 +20,10 @@ export class OrdersListingComponent {
     this.route.queryParams.subscribe( (params: any) => {
       console.log(params)
       this.type = params.searchType
-      if (this.type == 'store') {
+      if (this.type == 'client') {
         this.orders = this.service.readOrdersByStore(params.searchValue)
       }
-      if (this.type == 'client') {
+      if (this.type == 'store') {
         this.orders = this.service.readOrdersByClient(params.searchValue)
       }
     });
