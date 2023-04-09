@@ -35,25 +35,32 @@
               <div class="u-repeater u-repeater-1">
                 <div class="u-black u-container-style u-list-item u-opacity u-opacity-50 u-repeater-item u-list-item-1">
                   <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="../../assets/images/2693507-84c9c643.png" alt=""></span>
-                    <h5 class="u-align-center u-text u-text-2">Data de encomenda</h5>
+                    <h5 class="u-align-center u-text u-text-2 ">Data de encomenda</h5>
+                    <div class="form-group col-md-6">
+                      
+                      <input required ngModel name="model" type="date" #model="ngModel" class="form-control text-input" placeholder="Nome">
+                      <div class="alert alert-danger" *ngIf="model.touched && !model.valid">
+                          <div *ngIf="model.errors?.['required']">Escolha a Data</div>
+                      </div>
+                  </div>
                   </div>
                 </div>
                 <div class="u-black u-container-style u-list-item u-opacity u-opacity-50 u-repeater-item u-video-cover">
                   <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-text-white u-icon-2"><img src="../../assets/images/2091733-81403bd9.png" alt=""></span>
                     <h5 class="u-align-center u-text u-text-3">Valor em compras</h5>
+                    <div class="form-group col-md-7">
+                      
+                      <input required ngModel name="model" #model="ngModel" type="text" class="form-control-2 text-input" placeholder="Nome">
+                      <div class="alert alert-danger" *ngIf="model.touched && !model.valid">
+                          <div *ngIf="model.errors?.['required']">Defina um Valor</div>
+                      </div>
+                  </div>
                   </div>
                 </div>
               </div>
             </div>
             <form ngForm #f="ngForm" (ngSubmit)="submit();" class="container-xl container" style="margin: 0px; border: 0px; padding: 0px; max-width: none;">
               <div class="form-row">
-                  <div class="form-group col-md-6">
-                      <label class="thick">Model</label>
-                      <input required ngModel name="model" #model="ngModel" type="text" class="form-control text-input">
-                      <div class="alert alert-danger" *ngIf="model.touched && !model.valid">
-                          <div *ngIf="model.errors?.['required']">Model is required</div>
-                      </div>
-                  </div>
                 </div>
                 <div class="">
                   <button class="btn btn-primary btn-block blue-btn thick" style="margin: 0px; margin-top: 24px;" [disabled]="!f.valid">Register Car</button>

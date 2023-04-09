@@ -230,7 +230,7 @@
   }
   
   .u-section-2 .u-text-2 {
-    margin: 52px 0 0;
+    margin: 36px 0 0;
   }
   
   .u-section-2 .u-container-layout-3 {
@@ -293,6 +293,22 @@
       padding-left: 10px;
       padding-right: 10px;
     }
+  }
+
+
+  .form-control {
+    color: black;
+    opacity: 0.2;
+  }
+
+  .form-control-2 {
+    color: black;
+    opacity: 0.2;
+    width: 130px;
+  }
+
+  .u-text{
+    border-top: 1px;
   }
   
   @media (max-width: 575px) {
