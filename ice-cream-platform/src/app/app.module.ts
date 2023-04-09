@@ -13,6 +13,7 @@ import { OrdersListingComponent } from './components/orders/orders-listing/order
 import { OrdersSearchService } from './services/orders-search.service';
 import { ProductsComponent } from './components/products/products.component';
 import { EmployeeComponent } from './components/employee/employee.component';
+import { StoreComponent } from './components/store/store.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EmployeeComponent } from './components/employee/employee.component';
     ClientsListingComponent,
     OrdersListingComponent,
     ProductsComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,

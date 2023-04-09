@@ -28,13 +28,15 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-container-style u-grey-80 u-group u-opacity u-opacity-20 u-radius-21 u-shape-round u-group-1">
           <div class="u-container-layout u-container-layout-1">
-            <h2 class="u-align-center u-custom-font u-font-lato u-text u-text-grey-80 u-text-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Buscar desempenho do funcionário ...</h2>
+            <h2 class="titulo u-align-center u-custom-font u-font-lato u-text u-text-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Buscar desempenho do funcionário ...</h2>
             <div class="u-list u-list-1">
-              <div class="u-repeater u-repeater-1">
+              <div display="inline" class="u-repeater u-repeater-1">
                 <div class="u-black u-container-style u-list-item u-opacity u-opacity-50 u-repeater-item u-list-item-1">
-                  <div class="u-container-layout u-similar-container u-container-layout-2"><span class="u-file-icon u-icon u-text-grey-5 u-icon-1"><img src="../../../assets/images/912316-bbdd12e6.png" alt=""></span>
-                    <h5 class="u-align-center u-text u-text-2">Nome do Funcionário:<br>
-                    </h5>
+                  <div class="alinhar u-container-layout u-similar-container u-container-layout-2">
+                    <form ngForm #femployer="ngForm" (ngSubmit)="submitEmployer(femployer.value)" class="container-xl container"></form>
+                    <span class="u-file-icon u-icon  u-icon-1"><img src="../../../assets/images/912316-bbdd12e6.png" alt=""></span>
+                    <span><input ngModel name="text" type="text" #date="ngModel" class="formulario form-control" placeholder="Funcionário"></span>
+                    <span><button class="formulario botao" href="">Buscar</button></span>
                   </div>
                 </div>
               </div>
@@ -43,7 +45,7 @@
               <div class="u-repeater u-repeater-2">
                 <div class="u-black u-container-style u-list-item u-opacity u-opacity-50 u-repeater-item u-list-item-2">
                   <div class="u-container-layout u-similar-container u-container-layout-3"><span class="u-file-icon u-icon u-text-grey-10 u-icon-2"><img src="../../../assets/images/3642114-e8a01db0.png" alt=""></span>
-                    <h5 class="u-align-center u-text u-text-3">Número de Vendas:&nbsp; <br>
+                    <h5 class="u-align-center u-text u-text-3">Número de Vendas: <br>
                     </h5>
                   </div>
                 </div>

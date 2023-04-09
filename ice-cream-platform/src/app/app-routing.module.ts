@@ -7,6 +7,7 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { OrdersListingComponent } from './components/orders/orders-listing/orders-listing.component';
 import { OrdersComponent } from './components/orders/orders.component';
 import { ProductsComponent } from './components/products/products.component';
+import { StoreComponent } from './components/store/store.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -15,7 +16,9 @@ const routes: Routes = [
   {path: 'clients-search/clients-listing', component: ClientsListingComponent},
   {path: 'orders-search/orders-listing', component: OrdersListingComponent},
   {path: 'products-search', component: ProductsComponent},
-  {path: 'employee-search', component: EmployeeComponent}
+  {path: 'employee-search', component: EmployeeComponent},
+  {path: 'store-search', component: StoreComponent}
+
 ];
 
 @NgModule({
