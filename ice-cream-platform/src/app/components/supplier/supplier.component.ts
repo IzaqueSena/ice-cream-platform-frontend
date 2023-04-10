@@ -17,11 +17,11 @@ export class SupplierComponent {
   }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe( (params: any) => {
-      console.log(params)
-      this.type = params.searchType
-      this.suppliers = this.searchService.readSuppliers()
-    });
+    this.getData()
+  }
+
+  async getData() {
+    this.suppliers = await this.service.readSuppliers()
   }
 
 }
