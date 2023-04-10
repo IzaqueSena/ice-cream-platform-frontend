@@ -16,14 +16,16 @@ export class ClientsComponent {
     console.log(forms)
     let date = forms.date
     console.log(date)
-    this.router.navigate(['clients-search/clients-listing'],{queryParams: {searchType: 'date', searchValue: date}}).then(() => {window.location.reload();});
+    // this.router.navigate(['clients-search/clients-listing'],{queryParams: {searchType: 'date', searchValue: date}}).then(() => {window.location.reload();});
+    this.router.navigate(['clients-search/clients-listing'],{queryParams: {searchType: 'date', searchValue: date}})
   }
 
   submitValue(forms: any) {
     console.log(forms)
     let value = forms.value
     console.log(value)
-    this.router.navigate(['clients-search/clients-listing'],{queryParams: {searchType: 'value', searchValue: value}}).then(() => {window.location.reload();});
+    // this.router.navigate(['clients-search/clients-listing'],{queryParams: {searchType: 'value', searchValue: value}}).then(() => {window.location.reload();});
+    this.router.navigate(['clients-search/clients-listing'],{queryParams: {searchType: 'value', searchValue: value}})
   }
 
   log(x: any) {

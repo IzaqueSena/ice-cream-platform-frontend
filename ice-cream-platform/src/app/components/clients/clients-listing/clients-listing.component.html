@@ -41,9 +41,9 @@
               </thead>
               <tbody>
               <tr *ngFor="let client of clients;">
-                <td class="coluna">{{client.name}}</td>
+                <td class="coluna">{{client.nomeCliente}}</td>
                 <td class="coluna">{{client.email}}</td>
-                <td class="coluna">{{client.orderDate}}</td>
+                <td class="coluna">{{client.dataPedido}}</td>
               </tr>
               </tbody>
             </table>
@@ -57,9 +57,9 @@
               </thead>
               <tbody>
               <tr *ngFor="let client of clients;">
-                  <td class="coluna">{{client.name}}</td>
+                  <td class="coluna">{{client.nome}}</td>
                   <td class="coluna">{{client.email}}</td>
-                  <td class="coluna">{{client.totalValue}}</td>
+                  <td class="coluna">{{client.valor}}</td>
               </tr>
               </tbody>
             </table>

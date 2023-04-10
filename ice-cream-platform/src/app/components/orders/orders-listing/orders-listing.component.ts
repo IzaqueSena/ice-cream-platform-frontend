@@ -19,13 +19,17 @@ export class OrdersListingComponent {
   ngOnInit(): void {
     this.route.queryParams.subscribe( (params: any) => {
       console.log(params)
-      this.type = params.searchType
-      if (this.type == 'client') {
-        this.orders = this.service.readOrdersByStore(params.searchValue)
-      }
-      if (this.type == 'store') {
-        this.orders = this.service.readOrdersByClient(params.searchValue)
-      }
+      this.getData(params)
     });
+  }
+
+  async getData(params: any) {
+    this.type = params.searchType
+      if (this.type == 'store') {
+        this.orders = await this.service.readOrdersByStore(params.searchValue)
+      }
+      if (this.type == 'client') {
+        this.orders = await this.service.readOrdersByClient(params.searchValue)
+      }
   }
 }

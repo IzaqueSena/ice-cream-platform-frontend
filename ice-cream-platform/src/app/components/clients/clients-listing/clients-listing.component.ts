@@ -19,14 +19,18 @@ export class ClientsListingComponent {
   ngOnInit(): void {
     this.route.queryParams.subscribe( (params: any) => {
       console.log(params)
-      this.type = params.searchType
-      if (params.searchType == 'date') {
-        this.clients = this.searchService.readClientsByDate(params.searchValue)
-      }
-      if (params.searchType == 'value') {
-        this.clients = this.searchService.readClientsByValue(params.searchValue)
-      }
+      this.getData(params)
     });
+  }
+
+  async getData(params: any) {
+    this.type = params.searchType
+    if (params.searchType == 'date') {
+      this.clients = await this.searchService.readClientsByDate(params.searchValue)
+    }
+    if (params.searchType == 'value') {
+      this.clients = await this.searchService.readClientsByValue(params.searchValue)
+    }
   }
  
 }

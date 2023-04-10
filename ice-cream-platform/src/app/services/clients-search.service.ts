@@ -1,19 +1,49 @@
-export class ClientsSearchService {
-  clientsByDate = [
-    {name: 'izaque', email: 'iza@usp.br', orderDate: '21-02-2003'},
-    {name: 'a', email: 'iza@usp.br', orderDate: '21-02-2003'}
-  ];
-  
-  clientsByValue = [
-    {name: 'ib', email: 'iza@usp.br', totalValue: 2},
-    {name: 'c', email: 'iza@usp.br', totalValue: 3}
-  ];
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 
-  readClientsByDate(date: any) {
-    return this.clientsByDate;
+@Injectable({
+  providedIn: 'root'
+})
+export class ClientsSearchService {
+  url = 'http://localhost:8080/cliente' 
+
+  constructor(private http: HttpClient) {
+    
   }
 
-  readClientsByValue(date: any) {
-    return this.clientsByValue;
+  readClientsByDate(date: any) {
+    let params = new HttpParams()
+    let clients = Array()
+    params = params.set('dataLimite', date)
+    return new Promise((resolve, reject) => {
+      this.http.get(this.url + '/query7', { params: params }).subscribe((response: any) => {
+        console.log('Resposta da API:', response)
+        for(let i = 0; i < response.length; i++){
+          clients.push(response[i]);
+        }
+        resolve(clients)
+      }, (error: any) => {
+        console.error('Erro na requisição /cliente/query7', error)
+        reject()
+      })
+    })
+  }
+
+  readClientsByValue(value: any) {
+    let params = new HttpParams()
+    let clients = Array()
+    params = params.set('valor', value)
+    return new Promise((resolve, reject) => {
+      this.http.get(this.url + '/query8', { params: params }).subscribe((response: any) => {
+        console.log('Resposta da API:', response)
+        for(let i = 0; i < response.length; i++){
+          clients.push(response[i]);
+        }
+        resolve(clients)
+      }, (error: any) => {
+        console.error('Erro na requisição /cliente/query8', error)
+        reject()
+      })
+    })
   }
 }

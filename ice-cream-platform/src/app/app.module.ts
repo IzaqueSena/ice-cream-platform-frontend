@@ -20,6 +20,7 @@ import { SupplierComponent } from './components/supplier/supplier.component';
 import { SuppliersSearchService } from './services/suppliers-search.service';
 import { BestSellingProductService } from './services/best-selling-product.service';
 import { StoreElementsComponent } from './components/store/store-elements/store-elements.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { StoreElementsComponent } from './components/store/store-elements/store-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     ClientsSearchService,
