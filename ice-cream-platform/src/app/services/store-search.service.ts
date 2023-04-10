@@ -1,12 +1,12 @@
 export class StoreSearchService {
     funcionario = [
-      {name: 'izaque', email: 'iza@usp.br', orderDate: '21-02-2003'},
-      {name: 'a', email: 'iza@usp.br', orderDate: '21-02-2003'}
+      {name: 'izaque', cpf: '123'},
+      {name: 'a', cpf: '345'}
     ];
     
     fornecedor = [
-      {name: 'ib', email: 'iza@usp.br', totalValue: 2},
-      {name: 'c', email: 'iza@usp.br', totalValue: 3}
+      {name: 'ib', address: 'rua'},
+      {name: 'c', address: 'avenida'}
     ];
   
     readEmployees(storeName: any) {
