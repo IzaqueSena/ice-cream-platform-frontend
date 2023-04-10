@@ -8,16 +8,24 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
   show: boolean
-  bestSellingProductType?: string
+  bestSellingProductType: any
   service: BestSellingProductService
 
   constructor(private searchService: BestSellingProductService) {
     this.show = false
     this.service = searchService
+    this.bestSellingProductType = null
   }
 
   showProduct() {
-    this.bestSellingProductType = this.service.readBestSellingProductType()
-    this.show = true
+    this.getData()
+    
+  }
+
+  async getData() {
+    this.bestSellingProductType = await this.service.readBestSellingProductType()
+    if (this.bestSellingProductType != null) {
+      this.show = true
+    }
   }
 }

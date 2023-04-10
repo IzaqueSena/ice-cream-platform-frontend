@@ -19,13 +19,12 @@ export class EmployeeComponent {
 
   submitEmployer(forms: any) {
     console.log(forms)
-    this.employeePerformance = this.service.readEmployeePerformanceService(forms.employeeName)
-    console.log(this.employeePerformance)
-    this.show = true
+    this.getData(forms.employeeName)
   }
 
-  log(x: any) {
-    console.log(x)
-  } 
+  async getData(employeeName: any) {
+    this.employeePerformance = await this.service.readEmployeePerformanceService(employeeName)
+    this.show = true
+  }
 
 }

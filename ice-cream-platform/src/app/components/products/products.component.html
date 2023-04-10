@@ -37,7 +37,7 @@
                       <ng-template [ngIf]="show" [ngIfElse]="loggedOut">
                         <div>
                           Produto Mais Vendido:
-                        </div><br><div> {{ bestSellingProductType }}</div><br>
+                        </div><br><div> {{ bestSellingProductType.tipo }}</div><br>
                       </ng-template>
                       <ng-template #loggedOut>
                         <div>

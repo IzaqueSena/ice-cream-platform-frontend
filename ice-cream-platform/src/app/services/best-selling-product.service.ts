@@ -1,12 +1,25 @@
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 
 @Injectable({
   providedIn: 'root'
 })
 export class BestSellingProductService {
-    bestSellingProductType = "sorvete de casquinha"
+  url = 'http://localhost:8080/produto' 
 
-    readBestSellingProductType() {
-        return this.bestSellingProductType
-    }
+  constructor(private http: HttpClient) {
+    
+  }
+
+  readBestSellingProductType() {
+    return new Promise((resolve, reject) => {
+      this.http.get(this.url + '/query3').subscribe((response: any) => {
+        console.log('Resposta da API:', response)
+        resolve(response)
+      }, (error: any) => {
+        console.error('Erro na requisição /cliente/query3', error)
+        reject()
+      })
+    })
+  }
 }
