@@ -19,18 +19,14 @@ export class StoreComponent {
   submitDivEmployees() {
     this.storeName = this.fstore?.form.value.storeName
     console.log("employees " + this.storeName)
-    this.router.navigate(['stores-search/stores-elements'],{queryParams: {searchType: 'employees', storeName: this.storeName}}).then(() => {window.location.reload();});
+    this.router.navigate(['stores-search/stores-elements'],{queryParams: {searchType: 'employees', storeName: this.storeName}})
   }
 
   submitDivSuppliers() {
     this.storeName = this.fstore?.form.value.storeName
     console.log("suppliers " + this.storeName)
-    this.router.navigate(['stores-search/stores-elements'],{queryParams: {searchType: 'suppliers', storeName: this.storeName}}).then(() => {window.location.reload();});
+    this.router.navigate(['stores-search/stores-elements'],{queryParams: {searchType: 'suppliers', storeName: this.storeName}})
 
   }
-
-  log(x: any) {
-    console.log(x)
-  } 
 
 }

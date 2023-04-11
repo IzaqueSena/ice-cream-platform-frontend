@@ -1,24 +1,50 @@
+import { HttpClient, HttpParams } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 
 @Injectable({
   providedIn: 'root'
 })
 export class StoreSearchService {
-    funcionario = [
-      {name: 'izaque', cpf: '123'},
-      {name: 'a', cpf: '345'}
-    ];
+  urlEmployee = 'http://localhost:8080/funcionario/query4' 
+  urlSupplier = 'http://localhost:8080/fornecedor/query5' 
+
+  constructor(private http: HttpClient) {
     
-    fornecedor = [
-      {name: 'ib', address: 'rua'},
-      {name: 'c', address: 'avenida'}
-    ];
-  
-    readEmployees(storeName: any) {
-      return this.funcionario;
-    }
-  
-    readSuppliers(storeName: any) {
-      return this.fornecedor;
-    }
   }
+
+  readEmployees(storeName: any) {
+    let params = new HttpParams()
+    let employees = Array()
+    params = params.set('nomeLoja', storeName)
+    return new Promise((resolve, reject) => {
+      this.http.get(this.urlEmployee, { params: params }).subscribe((response: any) => {
+        console.log('Resposta da API:', response)
+        for(let i = 0; i < response.length; i++){
+          employees.push(response[i]);
+        }
+        resolve(employees)
+      }, (error: any) => {
+        console.error('Erro na requisição /funcionario/query4', error)
+        reject()
+      })
+    })
+  }
+
+  readSuppliers(storeName: any) {
+    let params = new HttpParams()
+    let suppliers = Array()
+    params = params.set('nomeLoja', storeName)
+    return new Promise((resolve, reject) => {
+      this.http.get(this.urlSupplier, { params: params }).subscribe((response: any) => {
+        console.log('Resposta da API:', response)
+        for(let i = 0; i < response.length; i++){
+          suppliers.push(response[i]);
+        }
+        resolve(suppliers)
+      }, (error: any) => {
+        console.error('Erro na requisição fornecedor/query5', error)
+        reject()
+      })
+    })
+  }
+}
