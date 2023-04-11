@@ -21,14 +21,18 @@ export class StoreElementsComponent {
   ngOnInit(): void {
     this.route.queryParams.subscribe( (params: any) => {
       console.log(params)
-      this.type = params.searchType
-      if (params.searchType == 'employees') {
-        this.employees = this.service.readEmployees(params.storeName)
-        console.log("employees " + params.storeName)
-      }
-      if (params.searchType == 'suppliers') {
-        this.suppliers = this.service.readSuppliers(params.storeName)
-      }
+      this.getData(params)
     });
+  }
+
+  async getData(params: any) {
+    this.type = params.searchType
+    if (params.searchType == 'employees') {
+      this.employees = await this.service.readEmployees(params.storeName)
+      console.log("employees " + params.storeName)
+    }
+    if (params.searchType == 'suppliers') {
+      this.suppliers = await this.service.readSuppliers(params.storeName)
+    }
   }
 }
