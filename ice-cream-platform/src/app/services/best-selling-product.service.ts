@@ -5,7 +5,7 @@ import { Injectable } from "@angular/core";
   providedIn: 'root'
 })
 export class BestSellingProductService {
-  url = 'http://localhost:8080/produto' 
+  url = 'http://localhost:8080/venda' 
 
   constructor(private http: HttpClient) {
     
